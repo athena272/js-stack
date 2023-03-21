@@ -14,3 +14,7 @@ const [back, front, ...restSkills] = skills
 
 console.log(rest)
 console.log(restSkills)
+
+const technologies = ['React', 'Node.js', 'TypeScript', 'React Native']
+const [mostUsed] = technologies
+console.log(mostUsed)
