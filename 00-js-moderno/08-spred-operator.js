@@ -12,7 +12,6 @@ const user = {
 const updateUser = {
     ...user,
     active: true,
-
 }
 
 console.log(user)
