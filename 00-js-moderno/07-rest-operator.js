@@ -9,8 +9,8 @@ const user = {
 
 //Rest Operator
 // const firstName = user.firstName
-const { firstName, skills } = user
-const [back] = skills
+const { firstName, skills, ...rest } = user
+const [back, ...restSkills] = skills
 
-console.log(fullName)
-console.log(`${back}`)
+console.log(rest)
+console.log(restSkills)
