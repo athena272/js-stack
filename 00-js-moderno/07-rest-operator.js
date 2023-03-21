@@ -10,7 +10,7 @@ const user = {
 //Rest Operator
 // const firstName = user.firstName
 const { firstName, skills, ...rest } = user
-const [back, ...restSkills] = skills
+const [back, front, ...restSkills] = skills
 
 console.log(rest)
 console.log(restSkills)
