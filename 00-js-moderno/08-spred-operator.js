@@ -11,6 +11,7 @@ const user = {
 //Spread (espalhar) operator
 const updateUser = {
     ...user,
+    skills: ['marketing', ...user.skills, 'hacking'],
     active: true,
 }
 
