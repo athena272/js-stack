@@ -17,3 +17,13 @@ const updateUser = {
 
 console.log(user)
 console.log(updateUser)
+
+const object = {
+    name: 'Matheus',
+    isOnline: false,
+}
+
+console.log({
+    ...object,
+    isOnline: true
+})
