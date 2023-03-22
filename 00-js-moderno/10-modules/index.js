@@ -1,3 +1,3 @@
-import { sayHello } from "./sayHello.js"
+import { sayHello as digaAiMoral} from "./sayHello.js"
 
-sayHello('Guilherme')
+digaAiMoral('Guilherme')
