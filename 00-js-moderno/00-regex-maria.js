@@ -1,7 +1,7 @@
 // const regex = /^[a-z]$/
-const str = '(87) 55455-7433';
+const regex = /^\(\d{2}\) (?!(\d)(?:-*\1){5})(?:\d{5}-\d{4})$/
+const str = '(78) 55555-5555';
 
-/^\(\d{2}\) (?!.*([0-9\-])\1{6,})[0-9\-]{1,}$/
 if (regex.test(str)) {
     console.log('Documento de identificação válido!');
 } else {
