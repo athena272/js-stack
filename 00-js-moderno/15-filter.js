@@ -6,3 +6,11 @@ const array = [
 
 const filter = array.filter((product) => product.quantity > 1)
 console.log({ filter })
+
+const numbers = [10, 20, 30, 40]
+const number = numbers.filter((number) => number > 20)
+console.log({ number })
+
+// const numbers = [10, 20, 30, 40];
+// numbers.filter(n => n > 20);
+// console.log(numbers);
