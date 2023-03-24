@@ -5,6 +5,6 @@ const array = [
 ]
 
 const reduce = array.reduce((accumulator, currentProduct) => {
-    return accumulator += (currentProduct.price * currentProduct.quantity)
+    return accumulator + (currentProduct.price * currentProduct.quantity)
 }, 0)
 console.log({ reduce })
