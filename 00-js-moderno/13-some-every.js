@@ -9,3 +9,7 @@ console.log({ some })
 
 const every = array.every((product) => product.price >= 1000)
 console.log({ every })
+
+const prices = [2000, 1230, 8000, 3999];
+const price = prices.every((price) => price > 1000)
+console.log({ prices })
