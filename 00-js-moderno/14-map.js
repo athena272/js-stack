@@ -4,11 +4,17 @@ const array = [
     { name: 'Magic Mouse', price: 1000, quantity: 5 },
 ]
 
-// Return the original array modified
-const map = array.map((product) => {
-    return {
-        ...product,
-        subtotal: product.quantity * product.price
-    }
-})
-console.log({ map })
+//Return the original array modified
+const map2 = array.map((product) => ({
+    ...product,
+    price: product.price += 1000
+
+}))
+// const map = array.map((product) => ({
+//     ...product,
+//     subtotal: product.quantity * product.price
+// }))
+
+console.log({ map2 })
+// console.log({ map })
+console.log({ array })
