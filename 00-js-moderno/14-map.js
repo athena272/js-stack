@@ -5,22 +5,22 @@ const array = [
 ]
 
 //Return the original array modified
-const map = array.map((product) => ({
-    ...product,
-    subtotal: product.quantity * product.price
-}))
-
-console.log({ map })
-console.log({ array })
-
-const numbers = [10, 20, 30, 40];
-const number = numbers.map((number) => number * 2)
-console.log({ number })
-
-// const map2 = array.map((product) => ({
+// const map = array.map((product) => ({
 //     ...product,
-//     subtotal: product.quantity * product.price,
-//     price: product.price += 1000
-
+//     subtotal: product.quantity * product.price
 // }))
-// console.log({ map2 })
+
+// console.log({ map })
+
+// const numbers = [10, 20, 30, 40];
+// const number = numbers.map((number) => number * 2)
+// console.log({ number })
+
+const map2 = array.map((product) => ({
+    ...product,
+    subtotal: product.quantity * product.price,
+    price: product.price = 1000
+
+}))
+console.log({ map2 })
+console.log({ array })
