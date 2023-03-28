@@ -1,0 +1,9 @@
+yarn add @babel/core @babel/preset-env @babel/cli @babel/preset-react -D
+
+// add no package.json, scripts
+"build": "babel src -d build"
+
+yarn add react@^17.0.2 react-dom@^17.0.2
+
+yarn add webpack webpack-cli -D
+command: yarn webpack 
