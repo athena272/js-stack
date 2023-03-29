@@ -13,3 +13,5 @@ yarn add html-webpack-plugin -D
 
 //clean new generated files
 yarn add clean-webpack-plugin -D
+
+yarn add babel-loader -D
