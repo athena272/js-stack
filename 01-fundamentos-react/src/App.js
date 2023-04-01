@@ -1,5 +1,10 @@
 import React from 'react'
 
 export function App() {
-    return <h1>Function App Component</h1>
-}
+    return (
+        <React.Fragment>
+            <h1>Function App Component</h1>
+            <h2>Subtitle</h2>
+        </React.Fragment>
+    )
+} 
