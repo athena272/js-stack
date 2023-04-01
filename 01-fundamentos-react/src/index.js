@@ -2,13 +2,11 @@
 
 // // Optional chaining
 // console.log(user?.address?.stree)
-
-import React  from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
+import { App } from './App.js'
 
 ReactDOM.render(
-    <h1 id='title'>
-        Hoya World!!!
-    </h1>,
+    <App />,
     document.getElementById('root')
 )
