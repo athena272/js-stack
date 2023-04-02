@@ -1,10 +1,14 @@
 import React from 'react'
 
+
+const postOfWeek = 'Posts da semana'
+
+// Render -> Renderizar
 export function App() {
     return (
         <React.Fragment>
-            <h1>Function App Component</h1>
-            <h2>Subtitle</h2>
+            <h1>JStack Blogs</h1>
+            <h2>{postOfWeek}</h2>
         </React.Fragment>
     )
 } 
