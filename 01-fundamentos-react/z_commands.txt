@@ -18,4 +18,4 @@ yarn add clean-webpack-plugin -D
 yarn add babel-loader -D
 
 // webserver
-yarn add webpack-dev-server  -D
+yarn add webpack-dev-server -D
