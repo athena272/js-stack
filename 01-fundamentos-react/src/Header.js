@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
 
 export function Header(props) {
@@ -8,4 +9,13 @@ export function Header(props) {
             {props.children} 
         </React.Fragment>
     )
+}
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node
+}
+
+Header.defaultProps = {
+    title: `JStack Pro Blog`,
 }
