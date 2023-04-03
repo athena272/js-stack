@@ -1,6 +1,7 @@
 import React from 'react'
-import { Post } from './Post.js'
 
+import { Post } from './Post.js'
+import { Header } from './Header.js'
 
 const postOfWeek = 'Posts da semana'
 
@@ -9,8 +10,9 @@ const postOfWeek = 'Posts da semana'
 export function App() {
     return (
         <React.Fragment>
-            <h1>JStack Blogs</h1>
-            <h2>{postOfWeek}</h2>
+            <Header title='JStack Pro Blog'>
+                <h2>{postOfWeek}</h2>
+            </Header>
 
             <hr />
 
@@ -30,12 +32,6 @@ export function App() {
                 post={{
                     title: 'Título Noticia 03',
                     subtitle: 'Sutítulo Noticia 03'
-                }}
-            />
-            <Post
-                post={{
-                    title: 'Título Noticia 04',
-                    subtitle: 'Sutítulo Noticia 04'
                 }}
             />
         </React.Fragment>
