@@ -19,3 +19,6 @@ yarn add babel-loader -D
 
 // webserver
 yarn add webpack-dev-server -D
+
+//types on props
+yarn add prop-types -D
