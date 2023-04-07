@@ -25,9 +25,7 @@ const server = http.createServer((req, res) => {
         req.params = { id }
 
         res.send = (statusCode, body) => {
-            res.writeHead(statusCode, {
-                'Content-Type': 'application/json'
-            })
+            res.writeHead(statusCode, { 'Content-Type': 'application/json' })
             res.end(JSON.stringify(body))
         }
 
