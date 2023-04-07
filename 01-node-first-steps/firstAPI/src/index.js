@@ -6,12 +6,25 @@ const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true)
     console.log(`Method: ${req.method} | Endpoint: ${req.url}`)
 
-    const route = routes.find((routeObj) => routeObj.method === req.method && routeObj.endpoint === parsedUrl.pathname)
+    let { pathname } = parsedUrl
+    let id = null
+
+    // const spliteEndpoint = pathname.split('/').filter((routerItem) => Boolean(routerItem))
+    const spliteEndpoint = pathname.split('/').filter(Boolean)
+
+    if (spliteEndpoint.length > 1) {
+        pathname = `/${spliteEndpoint[0]}/:id`
+        id = spliteEndpoint[1]
+        console.log(pathname)
+    }
+
+    const route = routes.find((routeObj) => routeObj.method === req.method && routeObj.endpoint === pathname)
 
     if (route) {
         req.query = parsedUrl.query
+        req.params = { id }
         route.handler(req, res)
-        
+
     } else {
         res.writeHead(404, {
             'Content-Type': 'text/html'
