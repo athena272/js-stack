@@ -4,6 +4,7 @@ const routes = require('./routes')
 
 const server = http.createServer((req, res) => {
     const parsedUrl = new URL('http://localhost:3000/users?order=desc')
+
     console.log(`Method: ${req.method} | Endpoint: ${req.url}`)
 
     const route = routes.find((routeObj) => routeObj.method === req.method && routeObj.endpoint === parsedUrl.pathname)
