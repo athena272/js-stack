@@ -1,6 +1,7 @@
 const http = require('http')
 const url = require('url')
 const routes = require('./routes')
+const { bodyParser } = require('./helpers/bodyParser.js')
 
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true)
@@ -29,8 +30,13 @@ const server = http.createServer((req, res) => {
             res.end(JSON.stringify(body))
         }
 
-        route.handler(req, res)
+        if (['POST', 'PUT', 'PATCH'].includes(req.method)) {
+            bodyParser(req, () => route.handler(req, res))
 
+        } else {
+            route.handler(req, res)
+
+        }
     } else {
         res.writeHead(404, {
             'Content-Type': 'text/html'
