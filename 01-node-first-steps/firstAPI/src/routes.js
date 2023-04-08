@@ -1,4 +1,4 @@
-const { listUsers, getUserById } = require('./controllers/userController.js')
+const { listUsers, getUserById, createUser } = require('./controllers/userController.js')
 
 module.exports = [
     {
@@ -10,5 +10,10 @@ module.exports = [
         endpoint: '/users/:id',
         method: 'GET',
         handler: getUserById
-    }
+    },
+    {
+        endpoint: '/users',
+        method: 'POST',
+        handler: createUser
+    },
 ]
