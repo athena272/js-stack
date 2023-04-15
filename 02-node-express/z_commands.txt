@@ -10,3 +10,10 @@ npx nodemon sr/index.js
 
 NPM SCRIPTS
 npm run dev
+
+yarn add eslint -D
+
+yarn eslint --init
+
+para o yarn reconhecer, lancar:
+yarn
