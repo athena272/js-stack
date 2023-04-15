@@ -7,3 +7,6 @@ yarn add nodemon -D
 
 2) forma
 npx nodemon sr/index.js
+
+NPM SCRIPTS
+npm run dev

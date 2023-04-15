@@ -5,6 +5,9 @@
   "main": "src/index.js",
   "author": "athena272",
   "license": "MIT",
+  "scripts": {
+    "dev": "npx nodemon sr/index.js"
+  },
   "dependencies": {
     "express": "^4.18.2"
   },
