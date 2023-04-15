@@ -1,1 +1,9 @@
 yarn add express
+
+yarn add nodemon -D
+
+1) forma
+./node_modules/.bin/nodemon src/index.js
+
+2) forma
+npx nodemon sr/index.js
