@@ -8,8 +8,18 @@ class ContactController {
     res.json(contacts)
   }
 
-  show() {
+  async show(req, res) {
     // Get one registered contact
+    const { id } = req.params
+    const contact = await ContactsRepository.findById(id)
+
+    if (!contact) {
+      // Not found
+      return res.status(400).json({ errorMessage: 'Contact not found' })
+
+    }
+    res.json(contact)
+    // res.send(req.params)
   }
 
   store() {
@@ -20,8 +30,20 @@ class ContactController {
     // Update the contact
   }
 
-  delete() {
+  async delete(req, res) {
     // Delete the contact
+    const { id } = req.params
+    const contact = await ContactsRepository.findById(id)
+
+    if (!contact) {
+      // Not found
+      return res.status(400).json({ errorMessage: 'Contact not found' })
+
+    }
+
+    await ContactsRepository.delete(id)
+    // Sucessfully without body
+    res.sendStatus(204)
   }
 }
 
