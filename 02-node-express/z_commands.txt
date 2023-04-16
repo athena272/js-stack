@@ -19,3 +19,7 @@ para o yarn reconhecer, lancar:
 yarn
 
 yarn add uuidv4
+
+yarn remove uuidv4
+
+yarn add uuid
