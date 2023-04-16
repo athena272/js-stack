@@ -40,7 +40,7 @@ class ContactController {
       name, email, phone, category_id,
     })
 
-    res.send(contact)
+    res.json(contact)
   }
 
   update() {
