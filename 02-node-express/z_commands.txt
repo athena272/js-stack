@@ -17,3 +17,5 @@ yarn eslint --init
 
 para o yarn reconhecer, lancar:
 yarn
+
+yarn add uuidv4
