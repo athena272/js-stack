@@ -23,3 +23,6 @@ yarn add uuidv4
 yarn remove uuidv4
 
 yarn add uuid
+
+===== DOCKER =====
+docker pull postgres
