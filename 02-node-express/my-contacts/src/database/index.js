@@ -13,7 +13,7 @@ client.connect()
   .catch((err) => console.log('💀 Error connecting to database', err))
 
 exports.query = async (query) => {
-  const { rows } = client.query(query)
+  const { rows } = await client.query(query)
   return rows
 }
 
