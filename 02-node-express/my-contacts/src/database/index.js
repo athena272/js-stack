@@ -5,7 +5,9 @@ const client = new Client({
   port: 5432,
   user: 'root',
   password: 'root',
-  database: 'mycontacts'
+  database: 'mycontacts',
 })
 
 client.connect()
+
+client.query('SELECT * FROM mycontacts').then(result => console.log(result))
