@@ -42,3 +42,16 @@ docker start name or containerID
 docker rmi REPOSITORY or IMAGE ID to delete
 
 docker container rm NAME
+
+docker exec -it pg bash
+
+
+===== POSTGRES =====
+
+psql -U root
+
+\l
+
+\c mycontacts
+
+\dt
