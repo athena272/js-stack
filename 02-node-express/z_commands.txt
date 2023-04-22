@@ -26,3 +26,19 @@ yarn add uuid
 
 ===== DOCKER =====
 docker pull postgres
+
+docker image ls
+
+docker run --name pg -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres
+
+docker container ls -a
+
+docker ps -a
+
+docker stop name or containerID
+
+docker start name or containerID
+
+docker rmi REPOSITORY or IMAGE ID to delete
+
+docker container rm NAME
