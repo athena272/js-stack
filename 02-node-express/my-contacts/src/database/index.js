@@ -9,5 +9,12 @@ const client = new Client({
 })
 
 client.connect()
+  .then(() => console.log('🔥 Connected to database 🔥'))
+  .catch((err) => console.log('💀 Error connecting to database', err))
 
-client.query('SELECT * FROM mycontacts').then(result => console.log(result))
+exports.query = async (query) => {
+  const { rows } = client.query(query)
+  return rows
+}
+
+// client.query('SELECT * FROM contacts').then(result => console.log(result))
