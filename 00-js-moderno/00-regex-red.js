@@ -1,5 +1,5 @@
-const regex = /^[a-zA-Z0-9./-]+$/;
-const document = '28.003.676/0001-58';
+const regex = /^(?!.*(\S)\1{2})[\s\S]*$/;
+const document = 'Programador C#$$$';
 console.log(document);
 
 if (regex.test(document)) {
