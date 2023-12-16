@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
-    entry: path.resolve(__dirname, 'build', 'index.js'),
+    mode: 'development',
+    entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle[hash].js',
@@ -18,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(?:js|mjs|cjs)$/,
+                test: /\.(?:js|jsx|mjs|cjs)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -30,5 +30,8 @@ module.exports = {
                 }
             }
         ]
+    },
+    devServer: {
+        port: 3000,
     }
 }
