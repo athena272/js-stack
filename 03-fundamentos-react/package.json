@@ -11,7 +11,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "build": "babel src -d build && webpack"
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "dependencies": {
     "react": "17.0.2",
