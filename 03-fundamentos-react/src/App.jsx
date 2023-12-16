@@ -12,7 +12,8 @@ const App = () => (
         <hr />
 
         {posts.map((post, index) => (
-            <Post key={index}
+            <Post
+                key={index}
                 likes={post.likes}
                 post={{
                     title: post.title,
