@@ -25,3 +25,9 @@ yarn add -D babel-loader @babel/core @babel/preset-env webpack
 
 //types on props
 yarn add prop-types -D
+
+//css loader
+yarn add -D css-loader style-loader
+
+//sass loader
+yarn add -D sass-loader sass
