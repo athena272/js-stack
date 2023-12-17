@@ -1,7 +1,9 @@
 .post {
     margin-bottom: 24px;
+}
 
-    &.deleted {
-        opacity: 0.45;
-    }
+.postDeleted {
+    opacity: 0.45;
+    margin-bottom: 24px;
+
 }
