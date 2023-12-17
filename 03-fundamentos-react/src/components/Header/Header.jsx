@@ -1,21 +1,26 @@
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import Button from "../Button/Button.jsx"
+import { ThemeContext } from "../Provider/ThemeContext.jsx"
+import styles from './Header.css'
 
-const Header = ({ title, onToggleTheme, theme, children }) => (
-    <>
-        <h1>
-            {title}
-        </h1>
-        {children}
-        <Button onClick={onToggleTheme} theme={theme}>
-            Change Theme
-        </Button>
-    </>
-)
+const Header = ({ title, children }) => {
+    const { onToggleTheme } = useContext(ThemeContext)
+
+    return (
+        <div className={styles.container}>
+            <h1 className={styles.title}>
+                {title}
+            </h1>
+            {children}
+            <Button onClick={onToggleTheme}>
+                Change Theme
+            </Button>
+        </div>
+    )
+}
 
 Header.propTypes = {
-    onToggleTheme: PropTypes.func,
     title: PropTypes.string,
     children: PropTypes.node
 }
