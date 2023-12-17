@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const PostHeader = ({ post }) => (
+const PostHeader = ({ post, theme }) => (
     <>
         <strong>
             {post.isRead ? <s>{post.title}</s> : post.title}
@@ -12,6 +12,7 @@ const PostHeader = ({ post }) => (
 )
 
 PostHeader.propTypes = {
+    theme: PropTypes.string.isRequired,
     post: PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
