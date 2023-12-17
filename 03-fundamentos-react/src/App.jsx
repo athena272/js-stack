@@ -42,6 +42,16 @@ const App = () => {
         ))
     }
 
+    const handleRead = (postId) => {
+        setPostsToUse(currentPost => currentPost.map(
+            post => (
+                post.id === postId
+                    ? { ...post, isRead: true }
+                    : post
+            )
+        ))
+    }
+
     return (
         <ThemeProvider>
             <Header>
@@ -55,6 +65,7 @@ const App = () => {
                 <Post
                     key={index}
                     post={post}
+                    onRead={handleRead}
                     onRemove={handleRemove}
                 />
             ))}
