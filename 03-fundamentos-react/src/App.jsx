@@ -33,7 +33,13 @@ const App = () => {
     }
 
     const handleRemove = (postId) => {
-        setPostsToUse(currentPost => currentPost.filter(post => post.id !== postId))
+        setPostsToUse(currentPost => currentPost.map(
+            post => (
+                post.id === postId
+                    ? { ...post, isRemove: true }
+                    : post
+            )
+        ))
     }
 
     return (
