@@ -1,17 +1,11 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import { posts } from "./data/index.js";
 import Post from "./components/Post/Post.jsx";
-
-const themeContext = createContext('dark')
+import ThemeProvider from "./components/Provider/ThemeContext.jsx";
 
 const App = () => {
-    const [theme, setTheme] = useState('dark')
     const [postsToUse, setPostsToUse] = useState(posts)
-
-    const handleToggleTheme = () => {
-        setTheme(currentTheme => currentTheme === 'dark' ? 'light' : 'dark')
-    }
 
     const handleRefresh = () => {
         const postNumber = postsToUse.length + 1
@@ -43,8 +37,8 @@ const App = () => {
     }
 
     return (
-        <>
-            <Header onToggleTheme={handleToggleTheme} theme={theme}>
+        <ThemeProvider>
+            <Header>
                 <h2>Posts da semana</h2>
                 <button onClick={handleRefresh}>Render again</button>
             </Header>
@@ -53,13 +47,12 @@ const App = () => {
 
             {postsToUse.map((post, index) => (
                 <Post
-                    theme={theme}
                     key={index}
                     post={post}
                     onRemove={handleRemove}
                 />
             ))}
-        </>
+        </ ThemeProvider>
     )
 }
 
