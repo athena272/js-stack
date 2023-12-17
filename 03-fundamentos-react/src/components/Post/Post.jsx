@@ -4,9 +4,12 @@ import PostHeader from "./PostHeader.jsx"
 import Button from "../Button/Button.jsx";
 import styles from './Post.scss'
 
-const Post = ({ post, onRemove }) => (
+const Post = ({ post, onRemove, onRead }) => (
     <>
-        <article className={styles.post}>
+        <article className={
+            post.isRemove ? styles.postDeleted : styles.post
+        }
+        >
             <PostHeader post={post} />
         </article>
 
@@ -14,13 +17,14 @@ const Post = ({ post, onRemove }) => (
             Remove
         </Button>
 
-        <button>Read a post</button>
+        <button onClick={() => onRead(post.id)}>Read a post</button>
         <hr />
     </>
 )
 
 Post.propTypes = {
     onRemove: PropTypes.func.isRequired,
+    onRead: PropTypes.func.isRequired,
     post: PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
