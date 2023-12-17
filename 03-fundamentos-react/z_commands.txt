@@ -31,3 +31,6 @@ yarn add -D css-loader style-loader
 
 //sass loader
 yarn add -D sass-loader sass
+
+//install styled-components
+yarn add styled-components
