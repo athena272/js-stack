@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import { posts } from "./data/index.js";
 import Post from "./components/Post/Post.jsx";
-import ThemeProvider from "./components/Provider/ThemeContext.jsx";
+import ThemeProvider from "./context/ThemeContext/ThemeContext.jsx";
 
 const App = () => {
     const [postsToUse, setPostsToUse] = useState(posts)
@@ -13,7 +13,9 @@ const App = () => {
             id: Math.random(),
             title: `Título número ${postNumber}`,
             subtitle: `Subtítulo número ${postNumber}`,
-            likes: postNumber * 100
+            likes: postNumber * 100,
+            isRead: false,
+            isRemove: false,
         }
 
         setPostsToUse(currentPosts => [...currentPosts, newPost])

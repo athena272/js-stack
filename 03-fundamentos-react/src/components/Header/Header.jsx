@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import Button from "../Button/Button.jsx"
-import { ThemeContext } from "../Provider/ThemeContext.jsx"
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext.jsx"
 import styles from './Header.scss'
 
 const Header = ({ title, children }) => {

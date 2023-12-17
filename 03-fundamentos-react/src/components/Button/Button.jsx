@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from "prop-types"
-import { ThemeContext } from '../Provider/ThemeContext.jsx';
+import { ThemeContext } from '../../context/ThemeContext/ThemeContext.jsx';
 
 const Button = ({ onClick, children }) => {
     const { theme } = useContext(ThemeContext)
