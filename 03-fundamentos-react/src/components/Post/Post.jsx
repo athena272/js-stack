@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import PostHeader from "./PostHeader.jsx"
 import Button from "../Button/Button.jsx";
 
-const Post = ({ post, onRemove }) => (
+const Post = ({ post, onRemove, theme }) => (
     <>
         <article>
-            <PostHeader post={post} />
+            <PostHeader post={post} theme={theme} />
         </article>
         <br />
 
-        <Button onClick={() => onRemove(post.id)}>
+        <Button onClick={() => onRemove(post.id)} theme={theme}>
             Remove
         </Button>
 
@@ -21,6 +21,7 @@ const Post = ({ post, onRemove }) => (
 )
 
 Post.propTypes = {
+    theme: PropTypes.string.isRequired,
     onRemove: PropTypes.func.isRequired,
     post: PropTypes.shape({
         id: PropTypes.number.isRequired,
