@@ -1,13 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { SubTitle, Rate } from './styles.js'
 
 const PostHeader = ({ post }) => (
     <>
         <strong>
             {post.isRead ? <s>{post.title}</s> : post.title}
         </strong> <br />
-        <small>{post.subtitle}</small> <br />
-        Likes: {post.likes}
+        <SubTitle>{post.subtitle}</SubTitle> <br />
+        <Rate>Likes: {post.likes}</Rate>
     </>
 )
 
