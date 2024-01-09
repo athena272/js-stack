@@ -3,6 +3,7 @@ import Header from "./components/Header/Header.jsx";
 import { posts } from "./data/index.js";
 import Post from "./components/Post/Post.jsx";
 import ThemeProvider from "./context/ThemeContext/ThemeContext.jsx";
+import { Title } from "./styles.js";
 
 const App = () => {
     const [postsToUse, setPostsToUse] = useState(posts)
@@ -57,7 +58,7 @@ const App = () => {
     return (
         <ThemeProvider>
             <Header>
-                <h2>Posts da semana</h2>
+                <Title as="h3">Posts da semana</Title>
                 <button onClick={handleRefresh}>Render again</button>
             </Header>
 
