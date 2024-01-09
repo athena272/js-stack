@@ -3,15 +3,17 @@ import PropTypes from "prop-types"
 import PostHeader from "./PostHeader.jsx"
 import Button from "../Button/Button.jsx";
 import styles from './Post.scss'
+import { Container } from './styles.js'
 
 const Post = ({ post, onRemove, onRead }) => (
     <>
-        <article className={
+        {/* <article className={
             post.isRemove ? styles.postDeleted : styles.post
         }
-        >
+        > */}
+        <Container isRemove={post.isRemove}>
             <PostHeader post={post} />
-        </article>
+        </Container>
 
         <Button onClick={() => onRemove(post.id)} >
             Remove
