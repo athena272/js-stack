@@ -20,10 +20,14 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
-      <Layout
-        onToggleTheme={handleToggleTheme}
-        selectedTheme={theme}
-      />
+      <button onClick={handleToggleTheme}>TOGGLE</button>
+      {theme === 'dark' && (
+        <Layout
+          onToggleTheme={handleToggleTheme}
+          selectedTheme={theme}
+        />
+      )}
+
     </ThemeProvider>
   );
 };
