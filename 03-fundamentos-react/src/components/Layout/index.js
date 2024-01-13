@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from 'styled-components';
 
 import Header from '../Header';
@@ -6,6 +6,14 @@ import PostsList from '../PostsList';
 import Footer from '../Footer';
 
 export default function Layout({ onToggleTheme, selectedTheme }) {
+  useEffect(() => {
+    console.log({ selectedTheme })
+
+    return () => {
+      console.log('<Layout /> saiu da tela')
+    }
+  })
+
   const theme = useTheme()
 
   console.log(theme)
