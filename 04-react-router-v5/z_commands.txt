@@ -1,0 +1,38 @@
+yarn add @babel/core @babel/preset-env @babel/cli @babel/preset-react -D
+
+// add no package.json, scripts
+"build": "babel src -d build"
+
+yarn add react@^17.0.2 react-dom@^17.0.2
+
+yarn add webpack webpack-cli -D
+command: yarn webpack 
+
+// generate hash
+yarn add html-webpack-plugin -D
+
+//clean new generated files
+yarn add clean-webpack-plugin -D
+
+// loader 
+yarn add babel-loader -D
+
+// webserver
+yarn add webpack-dev-server -D
+
+//link: https://webpack.js.org/loaders/babel-loader
+yarn add -D babel-loader @babel/core @babel/preset-env webpack
+
+//types on props
+yarn add prop-types -D
+
+//css loader
+yarn add -D css-loader style-loader
+
+//sass loader
+yarn add -D sass-loader sass
+
+//install styled-components
+yarn add styled-components
+
+//yarn add react-router-dom@5.3.0
