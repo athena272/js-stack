@@ -34,3 +34,5 @@ yarn add -D sass-loader sass
 
 //install styled-components
 yarn add styled-components
+
+//yarn add react-router-dom@5.3.0
