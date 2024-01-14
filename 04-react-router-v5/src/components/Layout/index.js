@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, BrowserRouter } from 'react-router-dom';
+import { Nav } from './styles';
 import Header from '../Header';
 import Footer from '../Footer';
 import Routes from '../../Routes';
-import { Nav } from './styles';
 
 export default function Layout() {
   return (
