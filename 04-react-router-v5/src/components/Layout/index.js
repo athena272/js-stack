@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link, BrowserRouter, useHistory } from 'react-router-dom';
 import { Nav } from './styles';
 import Header from '../Header';
 import Footer from '../Footer';
