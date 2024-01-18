@@ -1,9 +1,11 @@
+import { func } from "prop-types";
 import React, { useMemo } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useHistory } from "react-router-dom";
 
 export default function Home() {
     const params = useParams()
     const { search } = useLocation()
+    const history = useHistory()
 
     const queryParams = useMemo(() => new URLSearchParams(search), [search])
 
@@ -11,7 +13,15 @@ export default function Home() {
     console.log(params)
     console.log(queryParams.get('meuTeste'))
 
+
+    function handleNavigate() {
+        history.push('/posts')
+    }
+
     return (
-        <h1>Post page</h1>
+        <>
+            <button onClick={handleNavigate}>Voltar para lista de POSTS</button>
+            <h1>Post page</h1>
+        </>
     )
 }
