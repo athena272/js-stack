@@ -1,9 +1,11 @@
-const regex = /^(?!.*(\S)\1{2})[\s\S]*$/;
-const document = 'Programador C#$$$';
-console.log(document);
+const regexCartao = /^3(0[0-5]|[68]\d)\d{11}$/;
+const cartao = '3025 232500 5156';
+const valueToUse = cartao.replace(/[- ]/g, "");
 
-if (regex.test(document)) {
-    console.log('Documento de identificação válido!');
+console.log(valueToUse);
+
+if (regexCartao.test(valueToUse)) {
+    console.log('Cartão válido!');
 } else {
-    console.log('Documento de identificação inválido!');
+    console.log('Cartão inválido!');
 }
