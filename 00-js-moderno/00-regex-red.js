@@ -1,11 +1,12 @@
-const regexCartao = /^3(0[0-5]|[68]\d)\d{11}$/;
-const cartao = '3025 232500 5156';
-const valueToUse = cartao.replace(/[- ]/g, "");
+const regexCartao = /^[0-9]{5}-[0-9]{3}$/;
+const CEP = '00000-000';
+                
+// const valueToUse = cartao.replace(/[- ]/g, "");
 
-console.log(valueToUse);
+console.log(CEP);
 
-if (regexCartao.test(valueToUse)) {
-    console.log('Cartão válido!');
+if (regexCartao.test(CEP)) {
+    console.log('CEP válido!');
 } else {
-    console.log('Cartão inválido!');
+    console.log('CEP inválido!');
 }
